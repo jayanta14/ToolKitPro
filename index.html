@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToolKit Pro – Your All-in-One Utility Hub</title>
+  <meta name="description" content="ToolKit Pro offers 7 powerful free online tools: Password Generator, Loan EMI Calculator, FD Interest Calculator, Bengali Date Converter, Day Counter, Text to Handwriting, and Currency Converter." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">ToolKit <span class="logo-pro">Pro</span></span>
+      </div>
+      <button class="close-sidebar" id="closeSidebar" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#" class="nav-item active" data-tool="home" id="nav-home">
+          <span class="nav-icon">🏠</span><span>Home</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-tool="password" id="nav-password">
+          <span class="nav-icon">🔐</span><span>Password Generator</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-tool="emi" id="nav-emi">
+          <span class="nav-icon">🏦</span><span>EMI Calculator</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-tool="fd" id="nav-fd">
+          <span class="nav-icon">📈</span><span>FD Calculator</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-tool="dateconv" id="nav-dateconv">
+          <span class="nav-icon">📅</span><span>Bengali Date</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-tool="daycounter" id="nav-daycounter">
+          <span class="nav-icon">⏱️</span><span>Day Counter</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-tool="handwriting" id="nav-handwriting">
+          <span class="nav-icon">✍️</span><span>Handwriting</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-tool="currency" id="nav-currency">
+          <span class="nav-icon">💱</span><span>Currency Converter</span>
+        </a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <p>Made with ❤️ | ToolKit Pro</p>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Content -->
+  <div class="main-wrapper">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-title" id="topbarTitle">Home</div>
+      <div class="topbar-right">
+        <span class="badge">7 Tools</span>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+    <main class="content-area">
+
+      <!-- HOME -->
+      <section class="tool-section active" id="tool-home">
+        <div class="hero-section">
+          <div class="hero-text">
+            <h1>Welcome to <span class="gradient-text">ToolKit Pro</span></h1>
+            <p>Your all-in-one utility hub with 7 powerful free tools. No sign-up. No ads. Just tools.</p>
+          </div>
+          <div class="tools-grid">
+            <div class="tool-card" data-tool="password">
+              <div class="tool-card-icon">🔐</div>
+              <h3>Password Generator</h3>
+              <p>Generate strong, secure passwords with custom options</p>
+              <button class="btn btn-card">Open Tool →</button>
+            </div>
+            <div class="tool-card" data-tool="emi">
+              <div class="tool-card-icon">🏦</div>
+              <h3>EMI Calculator</h3>
+              <p>Calculate loan EMI with amortization schedule</p>
+              <button class="btn btn-card">Open Tool →</button>
+            </div>
+            <div class="tool-card" data-tool="fd">
+              <div class="tool-card-icon">📈</div>
+              <h3>FD Calculator</h3>
+              <p>Estimate Fixed Deposit maturity amount & interest</p>
+              <button class="btn btn-card">Open Tool →</button>
+            </div>
+            <div class="tool-card" data-tool="dateconv">
+              <div class="tool-card-icon">📅</div>
+              <h3>Bengali Date</h3>
+              <p>Convert English ↔ Bengali (Bangla) calendar dates</p>
+              <button class="btn btn-card">Open Tool →</button>
+            </div>
+            <div class="tool-card" data-tool="daycounter">
+              <div class="tool-card-icon">⏱️</div>
+              <h3>Day Counter</h3>
+              <p>Count days between dates or from today</p>
+              <button class="btn btn-card">Open Tool →</button>
+            </div>
+            <div class="tool-card" data-tool="handwriting">
+              <div class="tool-card-icon">✍️</div>
+              <h3>Handwriting</h3>
+              <p>Convert typed text into handwritten style output</p>
+              <button class="btn btn-card">Open Tool →</button>
+            </div>
+            <div class="tool-card" data-tool="currency">
+              <div class="tool-card-icon">💱</div>
+              <h3>Currency Converter</h3>
+              <p>Real-time currency conversion with live rates</p>
+              <button class="btn btn-card">Open Tool →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASSWORD GENERATOR -->
+      <section class="tool-section" id="tool-password">
+        <div class="tool-header">
+          <div class="tool-icon-big">🔐</div>
+          <div>
+            <h2>Password Generator</h2>
+            <p>Create strong, secure, random passwords instantly</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="password-display-wrap">
+            <input type="text" id="passwordOutput" class="password-output" readonly placeholder="Your password appears here..." />
+            <button class="btn-icon" id="copyPassword" title="Copy password">📋</button>
+            <button class="btn-icon" id="refreshPassword" title="Regenerate">🔄</button>
+          </div>
+          <div class="strength-bar-wrap">
+            <div class="strength-bar" id="strengthBar">
+              <div class="strength-fill" id="strengthFill"></div>
+            </div>
+            <span class="strength-label" id="strengthLabel">-</span>
+          </div>
+          <div class="options-grid">
+            <div class="option-group">
+              <label>Password Length: <span id="lengthValue">16</span></label>
+              <input type="range" id="pwLength" min="6" max="64" value="16" class="slider" />
+            </div>
+            <div class="checkboxes">
+              <label class="checkbox-label"><input type="checkbox" id="incUppercase" checked /><span class="checkmark"></span> Uppercase (A–Z)</label>
+              <label class="checkbox-label"><input type="checkbox" id="incLowercase" checked /><span class="checkmark"></span> Lowercase (a–z)</label>
+              <label class="checkbox-label"><input type="checkbox" id="incNumbers" checked /><span class="checkmark"></span> Numbers (0–9)</label>
+              <label class="checkbox-label"><input type="checkbox" id="incSymbols" checked /><span class="checkmark"></span> Symbols (!@#$...)</label>
+              <label class="checkbox-label"><input type="checkbox" id="excludeAmbiguous" /><span class="checkmark"></span> Exclude Ambiguous (0,O,l,1)</label>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-full" id="generatePassword">⚡ Generate Password</button>
+          <div id="copyToast" class="toast hidden">✅ Copied to clipboard!</div>
+        </div>
+        <div class="card tips-card">
+          <h4>💡 Password Tips</h4>
+          <ul>
+            <li>Use at least 12 characters for strong security</li>
+            <li>Mix uppercase, lowercase, numbers and symbols</li>
+            <li>Never reuse passwords across multiple accounts</li>
+            <li>Use a password manager to store them safely</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- EMI CALCULATOR -->
+      <section class="tool-section" id="tool-emi">
+        <div class="tool-header">
+          <div class="tool-icon-big">🏦</div>
+          <div>
+            <h2>Loan EMI Calculator</h2>
+            <p>Calculate your monthly EMI with full amortization breakdown</p>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <div class="input-group">
+              <label>Loan Amount (₹)</label>
+              <input type="number" id="loanAmount" class="input-field" value="500000" min="1000" />
+            </div>
+            <div class="input-group">
+              <label>Annual Interest Rate (%)</label>
+              <input type="number" id="loanRate" class="input-field" value="8.5" min="0.1" step="0.1" />
+            </div>
+            <div class="input-group">
+              <label>Loan Tenure (Months)</label>
+              <input type="number" id="loanTenure" class="input-field" value="60" min="1" />
+            </div>
+            <button class="btn btn-primary btn-full" id="calcEMI">Calculate EMI</button>
+          </div>
+          <div class="card" id="emiResult" style="display:none">
+            <h3 class="result-title">📊 Results</h3>
+            <div class="result-grid">
+              <div class="result-item highlight">
+                <span class="result-label">Monthly EMI</span>
+                <span class="result-value" id="emiValue">-</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Total Payment</span>
+                <span class="result-value" id="totalPayment">-</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Total Interest</span>
+                <span class="result-value" id="totalInterest">-</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Principal Amount</span>
+                <span class="result-value" id="principalAmount">-</span>
+              </div>
+            </div>
+            <div class="pie-wrap">
+              <canvas id="emiChart" width="220" height="220"></canvas>
+              <div class="pie-legend">
+                <div class="legend-item"><span class="dot dot-primary"></span> Principal</div>
+                <div class="legend-item"><span class="dot dot-accent"></span> Interest</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="amortizationWrap" style="display:none">
+          <h3>📋 Amortization Schedule</h3>
+          <div class="table-wrap">
+            <table class="data-table" id="amortizationTable">
+              <thead>
+                <tr><th>#</th><th>EMI</th><th>Principal</th><th>Interest</th><th>Balance</th></tr>
+              </thead>
+              <tbody id="amortizationBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- FD CALCULATOR -->
+      <section class="tool-section" id="tool-fd">
+        <div class="tool-header">
+          <div class="tool-icon-big">📈</div>
+          <div>
+            <h2>FD Interest Calculator</h2>
+            <p>Calculate Fixed Deposit maturity amount with compound/simple interest</p>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <div class="input-group">
+              <label>Principal Amount (₹)</label>
+              <input type="number" id="fdPrincipal" class="input-field" value="100000" min="1000" />
+            </div>
+            <div class="input-group">
+              <label>Annual Interest Rate (%)</label>
+              <input type="number" id="fdRate" class="input-field" value="7.5" min="0.1" step="0.1" />
+            </div>
+            <div class="input-group">
+              <label>Tenure</label>
+              <div class="tenure-row">
+                <input type="number" id="fdYears" class="input-field" value="1" min="0" placeholder="Years" />
+                <input type="number" id="fdMonths" class="input-field" value="0" min="0" max="11" placeholder="Months" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Compounding Frequency</label>
+              <select id="fdCompounding" class="input-field">
+                <option value="1">Annually</option>
+                <option value="2">Semi-Annually</option>
+                <option value="4" selected>Quarterly</option>
+                <option value="12">Monthly</option>
+                <option value="0">Simple Interest</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Tax Deduction (%)</label>
+              <input type="number" id="fdTax" class="input-field" value="0" min="0" max="100" step="0.1" placeholder="0 = No TDS" />
+            </div>
+            <button class="btn btn-primary btn-full" id="calcFD">Calculate FD</button>
+          </div>
+          <div class="card" id="fdResult" style="display:none">
+            <h3 class="result-title">📊 FD Maturity Results</h3>
+            <div class="result-grid">
+              <div class="result-item highlight">
+                <span class="result-label">Maturity Amount</span>
+                <span class="result-value" id="fdMaturity">-</span>
+              </div>
+              <div class="result-item highlight2">
+                <span class="result-label">After Tax Maturity</span>
+                <span class="result-value" id="fdAfterTax">-</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Interest Earned</span>
+                <span class="result-value" id="fdInterest">-</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Tax Deducted</span>
+                <span class="result-value" id="fdTaxAmt">-</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Principal</span>
+                <span class="result-value" id="fdPrincipalShow">-</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Effective Annual Rate</span>
+                <span class="result-value" id="fdEAR">-</span>
+              </div>
+            </div>
+            <div class="pie-wrap">
+              <canvas id="fdChart" width="220" height="220"></canvas>
+              <div class="pie-legend">
+                <div class="legend-item"><span class="dot dot-primary"></span> Principal</div>
+                <div class="legend-item"><span class="dot dot-accent"></span> Interest</div>
+                <div class="legend-item"><span class="dot dot-warn"></span> Tax</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENGALI DATE CONVERTER -->
+      <section class="tool-section" id="tool-dateconv">
+        <div class="tool-header">
+          <div class="tool-icon-big">📅</div>
+          <div>
+            <h2>Bengali Date Converter</h2>
+            <p>Convert between English (Gregorian) and Bengali (বাংলা) calendar dates</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="toggle-tabs" id="dateConvTabs">
+            <button class="tab-btn active" data-tab="eng2ben">English → Bengali</button>
+            <button class="tab-btn" data-tab="ben2eng">Bengali → English</button>
+          </div>
+          <!-- English to Bengali -->
+          <div id="eng2benPanel" class="tab-panel active">
+            <div class="input-group">
+              <label>Select English Date</label>
+              <input type="date" id="engDate" class="input-field" />
+            </div>
+            <button class="btn btn-primary btn-full" id="convertEng2Ben">Convert to Bengali</button>
+            <div class="date-result" id="bengaliDateResult" style="display:none">
+              <div class="date-display">
+                <div class="date-part">
+                  <span class="date-part-label">Bengali Date (বাংলা)</span>
+                  <span class="date-part-value bn-font" id="bengaliDateBn">-</span>
+                </div>
+                <div class="date-part">
+                  <span class="date-part-label">Bengali Date (English)</span>
+                  <span class="date-part-value" id="bengaliDateEn">-</span>
+                </div>
+                <div class="date-part">
+                  <span class="date-part-label">Bengali Month</span>
+                  <span class="date-part-value bn-font" id="bengaliMonth">-</span>
+                </div>
+                <div class="date-part">
+                  <span class="date-part-label">Bengali Season (ঋতু)</span>
+                  <span class="date-part-value bn-font" id="bengaliSeason">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bengali to English -->
+          <div id="ben2engPanel" class="tab-panel">
+            <div class="input-group">
+              <label>Bengali Year (বাংলা সন)</label>
+              <input type="number" id="benYear" class="input-field" placeholder="e.g. 1431" />
+            </div>
+            <div class="input-group">
+              <label>Bengali Month</label>
+              <select id="benMonth" class="input-field">
+                <option value="1">বৈশাখ (Boishakh)</option>
+                <option value="2">জ্যৈষ্ঠ (Joishtho)</option>
+                <option value="3">আষাঢ় (Asharh)</option>
+                <option value="4">শ্রাবণ (Shrabon)</option>
+                <option value="5">ভাদ্র (Bhadro)</option>
+                <option value="6">আশ্বিন (Ashwin)</option>
+                <option value="7">কার্তিক (Kartik)</option>
+                <option value="8">অগ্রহায়ণ (Agrohayon)</option>
+                <option value="9">পৌষ (Poush)</option>
+                <option value="10">মাঘ (Magh)</option>
+                <option value="11">ফাল্গুন (Falgun)</option>
+                <option value="12">চৈত্র (Chaitra)</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Bengali Day</label>
+              <input type="number" id="benDay" class="input-field" placeholder="1–30" min="1" max="31" />
+            </div>
+            <button class="btn btn-primary btn-full" id="convertBen2Eng">Convert to English</button>
+            <div class="date-result" id="englishDateResult" style="display:none">
+              <div class="date-display">
+                <div class="date-part">
+                  <span class="date-part-label">English Date</span>
+                  <span class="date-part-value" id="englishDateValue">-</span>
+                </div>
+                <div class="date-part">
+                  <span class="date-part-label">Day of Week</span>
+                  <span class="date-part-value" id="englishDayOfWeek">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Today's date info -->
+        <div class="card today-card">
+          <h4>📌 Today's Date</h4>
+          <div class="today-dates">
+            <div>
+              <span class="today-label">English:</span>
+              <span id="todayEnglish" class="today-value"></span>
+            </div>
+            <div>
+              <span class="today-label">Bengali:</span>
+              <span id="todayBengali" class="today-value bn-font"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DAY COUNTER -->
+      <section class="tool-section" id="tool-daycounter">
+        <div class="tool-header">
+          <div class="tool-icon-big">⏱️</div>
+          <div>
+            <h2>Day Counter</h2>
+            <p>Count days between any two dates with detailed breakdown</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="toggle-tabs" id="dayCounterTabs">
+            <button class="tab-btn active" data-tab="between">Between Two Dates</button>
+            <button class="tab-btn" data-tab="fromtoday">From Today</button>
+            <button class="tab-btn" data-tab="addsubtract">Add/Subtract Days</button>
+          </div>
+
+          <!-- Between Two Dates -->
+          <div id="betweenPanel" class="tab-panel active">
+            <div class="date-row">
+              <div class="input-group">
+                <label>Start Date</label>
+                <input type="date" id="startDate" class="input-field" />
+              </div>
+              <div class="input-group">
+                <label>End Date</label>
+                <input type="date" id="endDate" class="input-field" />
+              </div>
+            </div>
+            <div class="checkbox-row">
+              <label class="checkbox-label"><input type="checkbox" id="excludeWeekends" /><span class="checkmark"></span> Exclude Weekends</label>
+              <label class="checkbox-label"><input type="checkbox" id="includeEndDate" /><span class="checkmark"></span> Include End Date</label>
+            </div>
+            <button class="btn btn-primary btn-full" id="calcDaysBetween">Count Days</button>
+            <div id="daysBetweenResult" style="display:none">
+              <div class="result-grid mt-20">
+                <div class="result-item highlight"><span class="result-label">Total Days</span><span class="result-value" id="totalDays">-</span></div>
+                <div class="result-item"><span class="result-label">Weeks & Days</span><span class="result-value" id="weeksAndDays">-</span></div>
+                <div class="result-item"><span class="result-label">Weekdays</span><span class="result-value" id="weekdaysCount">-</span></div>
+                <div class="result-item"><span class="result-label">Weekends</span><span class="result-value" id="weekendsCount">-</span></div>
+                <div class="result-item"><span class="result-label">Months</span><span class="result-value" id="monthsCount">-</span></div>
+                <div class="result-item"><span class="result-label">Years</span><span class="result-value" id="yearsCount">-</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- From Today -->
+          <div id="fromtodayPanel" class="tab-panel">
+            <div class="input-group">
+              <label>Target Date</label>
+              <input type="date" id="targetDate" class="input-field" />
+            </div>
+            <button class="btn btn-primary btn-full" id="calcFromToday">Calculate</button>
+            <div id="fromTodayResult" style="display:none">
+              <div class="result-grid mt-20">
+                <div class="result-item highlight"><span class="result-label">Days</span><span class="result-value" id="daysFromToday">-</span></div>
+                <div class="result-item"><span class="result-label">Status</span><span class="result-value" id="futureOrPast">-</span></div>
+                <div class="result-item"><span class="result-label">Weeks</span><span class="result-value" id="weeksFromToday">-</span></div>
+                <div class="result-item"><span class="result-label">Months</span><span class="result-value" id="monthsFromToday">-</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add/Subtract Days -->
+          <div id="addsubtractPanel" class="tab-panel">
+            <div class="input-group">
+              <label>Start From Date</label>
+              <input type="date" id="addSubStartDate" class="input-field" />
+            </div>
+            <div class="date-row">
+              <div class="input-group">
+                <label>Days to Add/Subtract</label>
+                <input type="number" id="daysToAddSub" class="input-field" value="30" />
+              </div>
+              <div class="input-group">
+                <label>Operation</label>
+                <select id="addSubOp" class="input-field">
+                  <option value="add">Add Days</option>
+                  <option value="sub">Subtract Days</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-full" id="calcAddSub">Calculate Date</button>
+            <div id="addSubResult" style="display:none">
+              <div class="result-grid mt-20">
+                <div class="result-item highlight"><span class="result-label">Result Date</span><span class="result-value" id="addSubResultDate">-</span></div>
+                <div class="result-item"><span class="result-label">Day of Week</span><span class="result-value" id="addSubDayOfWeek">-</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Countdown -->
+        <div class="card live-card">
+          <h4>⏰ Live Clock</h4>
+          <div class="live-clock" id="liveClock">--:--:--</div>
+          <div class="live-date" id="liveDate">Loading...</div>
+        </div>
+      </section>
+
+      <!-- TEXT TO HANDWRITING -->
+      <section class="tool-section" id="tool-handwriting">
+        <div class="tool-header">
+          <div class="tool-icon-big">✍️</div>
+          <div>
+            <h2>Text to Handwriting</h2>
+            <p>Convert typed text into a realistic handwritten style</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="hw-controls">
+            <div class="input-group">
+              <label>Font Style</label>
+              <select id="hwFont" class="input-field">
+                <option value="'Caveat', cursive">Caveat (Casual)</option>
+                <option value="'Indie Flower', cursive">Indie Flower (Neat)</option>
+                <option value="'Shadows Into Light', cursive">Shadows Into Light</option>
+                <option value="'Kalam', cursive">Kalam (South Asian)</option>
+                <option value="'Patrick Hand', cursive">Patrick Hand</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Ink Color</label>
+              <input type="color" id="hwColor" value="#1a237e" class="color-picker" />
+            </div>
+            <div class="input-group">
+              <label>Font Size: <span id="hwSizeVal">22</span>px</label>
+              <input type="range" id="hwSize" min="14" max="42" value="22" class="slider" />
+            </div>
+            <div class="input-group">
+              <label>Background</label>
+              <select id="hwBackground" class="input-field">
+                <option value="white-plain">Plain White</option>
+                <option value="ruled" selected>Ruled Paper</option>
+                <option value="grid">Grid Paper</option>
+                <option value="yellow-ruled">Yellow Notebook</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Line Spacing: <span id="hwSpacingVal">1.8</span></label>
+              <input type="range" id="hwSpacing" min="1.2" max="3.0" value="1.8" step="0.1" class="slider" />
+            </div>
+          </div>
+          <div class="input-group">
+            <label>Enter Your Text</label>
+            <textarea id="hwText" class="input-field textarea-hw" placeholder="Type your text here...&#10;&#10;The quick brown fox jumps over the lazy dog."></textarea>
+          </div>
+          <div class="hw-btn-row">
+            <button class="btn btn-primary" id="generateHandwriting">✍️ Generate Handwriting</button>
+            <button class="btn btn-secondary" id="downloadHandwriting">💾 Download PNG</button>
+          </div>
+        </div>
+        <div class="card" id="hwOutputCard" style="display:none">
+          <h3>📄 Output</h3>
+          <canvas id="hwCanvas" class="hw-canvas"></canvas>
+        </div>
+      </section>
+
+      <!-- CURRENCY CONVERTER -->
+      <section class="tool-section" id="tool-currency">
+        <div class="tool-header">
+          <div class="tool-icon-big">💱</div>
+          <div>
+            <h2>Currency Converter</h2>
+            <p>Convert between world currencies with live exchange rates</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="currency-row">
+            <div class="currency-input-wrap">
+              <label>Amount</label>
+              <input type="number" id="currencyAmount" class="input-field" value="1" min="0" step="any" />
+            </div>
+            <div class="currency-input-wrap">
+              <label>From</label>
+              <select id="fromCurrency" class="input-field"></select>
+            </div>
+            <button class="swap-btn" id="swapCurrency" title="Swap currencies">⇄</button>
+            <div class="currency-input-wrap">
+              <label>To</label>
+              <select id="toCurrency" class="input-field"></select>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-full" id="convertCurrency">Convert</button>
+          <div id="currencyResult" style="display:none">
+            <div class="currency-result-display">
+              <div class="currency-result-main" id="currencyResultMain">-</div>
+              <div class="currency-result-rate" id="currencyResultRate">-</div>
+              <div class="currency-result-time" id="currencyResultTime">-</div>
+            </div>
+          </div>
+          <div id="currencyError" class="error-msg" style="display:none">⚠️ Could not fetch live rates. Showing cached rates.</div>
+        </div>
+        <!-- Quick Convert Table -->
+        <div class="card" id="quickConvertCard" style="display:none">
+          <h3>📊 Quick Reference</h3>
+          <div class="table-wrap">
+            <table class="data-table" id="quickConvertTable">
+              <thead><tr><th>Amount</th><th id="fromHeader">From</th><th id="toHeader">To</th></tr></thead>
+              <tbody id="quickConvertBody"></tbody>
+            </table>
+          </div>
+          <div class="popular-currencies">
+            <h4>Popular Currencies vs <span id="popularBase">USD</span></h4>
+            <div class="popular-grid" id="popularGrid"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Indie+Flower&family=Shadows+Into+Light&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <script src="app.js"></script>
+</body>
+</html>
